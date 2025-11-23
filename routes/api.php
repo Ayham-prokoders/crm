@@ -140,6 +140,14 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('{id}/invoices', [ContactController::class, 'invoices']);
         Route::get('{id}/emails', [ContactController::class, 'emails']);
         Route::get('{id}/certificates', [ContactController::class, 'certificates']);
+        Route::get('{id}/notes', [ContactController::class, 'notes']);
+        Route::post('{id}/notes', [ContactController::class, 'storeNote']);
+        Route::post('{id}/notes/{note}', [ContactController::class, 'updateNote']);
+        Route::delete('{id}/notes/{note}', [ContactController::class, 'deleteNote']);
+        Route::get('{id}/attachments', [ContactController::class, 'attachments']);
+        Route::post('{id}/attachments', [ContactController::class, 'storeAttachment']);
+        Route::post('{id}/attachments/{attachment}', [ContactController::class, 'updateAttachment']);
+        Route::delete('{id}/attachments/{attachment}', [ContactController::class, 'deleteAttachment']);
     });
 
     //switch Role
