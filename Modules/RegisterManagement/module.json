@@ -1,0 +1,11 @@
+{
+    "name": "RegisterManagement",
+    "alias": "registermanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RegisterManagement\\Providers\\RegisterManagementServiceProvider"
+    ],
+    "files": []
+}

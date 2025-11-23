@@ -1,0 +1,11 @@
+{
+    "name": "DealManagement",
+    "alias": "dealmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DealManagement\\Providers\\DealManagementServiceProvider"
+    ],
+    "files": []
+}

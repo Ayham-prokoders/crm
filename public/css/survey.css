@@ -1,0 +1,230 @@
+/* General Body Styling */
+body {
+    background-color: whitesmoke;
+    font-weight: var(--body-font-weight);
+    box-sizing: border-box;
+    font-size: var(--body-font-size);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.required-star {
+    color: red;
+    font-size: 16px;
+    margin-left: 5px;
+}
+/* Navbar */
+nav .upper-navbar {
+    background: #D59A32;
+    height: fit-content;
+}
+
+nav .upper-navbar .links {
+    font-size: 0.75rem;
+}
+
+nav .navbar, nav .lower-navbar {
+    width: 100%;
+    background-color: #012951;
+    padding: 0;
+}
+
+nav .navbar .navbar-nav, nav .links {
+    font-size: 0.8rem;
+}
+
+nav .navbar .navbar-nav a, nav .links a {
+    text-decoration: none;
+    color: #FFFFFF !important;
+    padding: 0.3125rem 0.4375rem;
+    font-weight: 400;
+}
+
+nav .navbar .navbar-toggler {
+    margin-right: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav .nav-item-right {
+    float: right;
+}
+
+/* Logo Styling */
+nav #logo img {
+    width: 9.375rem;
+    transition: 0.4s;
+}
+
+@media (max-width: 991px) {
+    nav #logo img {
+        width: 8.375rem;
+        transition: 0.4s;
+    }
+}
+
+/* Mega Dropdown */
+.mega-dropdown .mega-menu {
+    overflow: hidden;
+    position: absolute;
+    background: rgba(11, 50, 81, 0.8);
+    bottom: -1.4rem;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+    z-index: 10;
+    display: none;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.7rem;
+    grid-row-gap: 0.5rem;
+    width: max-content;
+    min-width: 100%;
+}
+
+/* Responsive Mega Menu */
+@media (min-width: 421px) and (max-width: 991px) {
+    .mega-dropdown .mega-menu {
+        grid-template-columns: 1fr;
+        width: 100%;
+        position: relative;
+        transform: unset;
+        bottom: unset;
+        left: unset;
+        overflow-y: auto;
+        max-height: 10rem;
+    }
+
+    .mega-dropdown .mega-menu.mega-one-col {
+        grid-template-columns: 1fr;
+        width: max-content;
+        position: absolute;
+        background: rgba(11, 50, 81, 0.8);
+        bottom: 0;
+        left: 50%;
+        transform: translateY(100%) translateX(-50%);
+        z-index: 10;
+    }
+}
+
+@media (max-width: 1072px) {
+    .mega-dropdown .mega-menu {
+        bottom: -0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #012951;
+    color: white;
+    padding-top: 20px;
+}
+
+footer .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-list > li {
+    list-style: none;
+    padding-left: 24px;
+}
+
+footer .orange-border {
+    border-top: 1px solid #D59A32;
+    border-bottom: 1px solid #D59A32;
+    padding: 12px 0 19px;
+}
+
+footer .label {
+    color: #D59A32;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+footer .bottom-banner {
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+footer .get-in-touch {
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+footer .footer-icon {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+footer a {
+    color: white;
+}
+
+footer .links a:hover {
+    color: #de8c35;
+}
+
+.footer-icon a {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Subscribe Section */
+#EMBED_FORM_EMAIL_LABEL {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #1E1E1E;
+    padding: 4px 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#subscribe {
+    height: 100%;
+    background-color: #DE8B0D;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 0 14px !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Miscellaneous */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.fa-linkedin:before {
+    content: "\f08c";
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
+.text-md-left {
+    text-align: left !important;
+}

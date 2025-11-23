@@ -1,0 +1,7 @@
+{
+    "DealManagement": true,
+    "RegisterManagement": true,
+    "TaskManagement": true,
+    "Lms": true,
+    "TrainerManagement": true
+}

@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: unset;
+    font-weight: 500;
+    line-height: unset;
+    font-size: unset;
+}
+body {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.6;
+    color: #333;
+}
+.main{
+    padding: 0px 40px;
+}
+.container1 {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 20px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #002F56;
+    color: white;
+}
+
+.header .logo img {
+    height: 60px;
+    margin-left: 30px;
+}
+
+.header .submission-date {
+    text-align: right;
+}
+
+.header .submission-date p {
+    margin-right: 50px;
+    font-size:12px !important;
+    color:rgb(231, 175, 21);
+}
+
+.profile {
+    display: flex;
+
+    align-items: flex-start;
+    /* align-items: center; */
+    /* background-color: #f8f8f8; */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.profile-image img {
+    border-radius: 10%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    font-size: 24px !important;
+    margin-bottom: 5px;
+}
+
+.profile-info .title {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    display: inline-flex;
+    align-items: center;
+    /* margin-bottom: 5px; */
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contact-info img {
+    margin-right: 10px;
+}
+
+.rating {
+    text-align: right;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.rating p {
+    margin: 0;
+}
+
+.stars {
+    font-size: 24px;
+    color: rgb(231, 175, 21);
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+.border-left{
+    border-left:solid rgb(255, 166, 0) 1px !important;
+    padding-left:10px;
+}
+.left-column,
+.right-column {
+    padding: 10px;
+}
+
+.left-column {
+    margin-right: 10px;
+    width:60%;
+}
+.right-column{
+    width:40%;
+}
+
+section {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+section h2 {
+    font-size: 20px !important;
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 10px;
+    color: #002F56;
+    border-bottom: solid rgb(255, 166, 0) 1px;
+    padding-bottom: 5px;
+}
+
+.expertise-item h3 {
+    font-size: 16px !important;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.testimonial-reference
+ {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.availability-preferences{}
+.testimonial-reference h2,
+.availability-preferences h2 {
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #1a427b;
+    margin-bottom: 10px;
+}
+.training-courses, .courses, .publications-speaking, .certifications {
+    /* margin-top: 30px; */
+    margin-bottom: 10px;
+    padding: 10px;
+    /* background-color: #f8f8f8; */
+    /* border-radius: 10px; */
+}
+p{
+    margin-bottom: unset;
+}
+h4{
+    font-weight: bold;
+}
+.training-courses h2, .courses h2, .publications-speaking h2, .certifications h2 .availability-preferences h2{
+    font-size: 20px !important;
+    font-weight: bold;
+    width: fit-content;
+    color: #002F56;
+    border-bottom:solid rgb(255, 166, 0) 1px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ .publications, .speaking-engagements {
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+    flex-direction:column;
+}
+.courses-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction:row; */
+}
+.course-item {
+    flex: 1 1 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.course-item, ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.course-item ul li, .publications ul li, .speaking-engagements ul li, .certifications ul li {
+    font-size: 16px !important;
+    margin-bottom: 5px;
+}
+
+.course-item ul, .publications ul, .speaking-engagements ul, .certifications ul {
+    padding-left: 0;
+}
+.links
+{
+    margin-bottom: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.icon1
+{
+    width:20px;
+    padding-right:5px;
+}
+.preferences-group {
+    display: flex;
+    flex-direction:column;
+
+}
+.preference-item {
+    /* margin-bottom: 20px; */
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+.icon2
+{
+    width:18px;
+    padding-right:5px;
+}
+/* footer */
+
+@media (max-width: 768px) {
+    main {
+        display: block;
+    }
+
+    .left-column, .right-column {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .header .submission-date p {
+         margin-right: unset;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .profile-info {
+        margin-left: unset;
+
+    }
+    .stars{
+        font-size: 16px;
+    }
+    .contact-info {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .rating{
+        margin-top: 10px;
+    }
+    .course-item {
+        flex: 1 1 100%;
+    }
+}

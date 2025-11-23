@@ -1,0 +1,1 @@
+$((function(){gsap.registerPlugin(ScrollTrigger),gsap.from("#search-section",{scrollTrigger:{trigger:"#search-section",start:"top 80%"},duration:2,opacity:0}),gsap.from(".certificate-img",{scrollTrigger:".certificate-img",duration:1.5,width:0,opacity:0,rotation:180}),ScrollReveal().reveal(".category-col",{interval:100,reset:!0})}));

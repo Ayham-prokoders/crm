@@ -1,0 +1,11 @@
+{
+    "name": "TrainerManagement",
+    "alias": "trainermanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TrainerManagement\\Providers\\TrainerManagementServiceProvider"
+    ],
+    "files": []
+}

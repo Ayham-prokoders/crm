@@ -1,0 +1,225 @@
+@page {
+    margin: 0mm;
+    /* padding-top: 5mm; */
+    background-color: white;}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 5px; */
+    background-color: white;
+}
+
+.header {
+    background-color: #002F56;
+    color: white;
+    padding: 20px;
+}
+
+.header .logo img {
+    width: 150px;
+}
+
+.header .submission-date p {
+    color: rgb(231, 175, 21);
+    margin-right: 10px;
+    font-size:12px;
+}
+
+.container1 {
+    background-color: white;
+    padding: 5px;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+
+.profile-image img {
+    border-radius: 10%;
+    width: 160px;
+    height: 180px;
+    border: 2px solid #eaeaea;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #002F56;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.contact-info img {
+    vertical-align: middle;
+    margin-right: 5px;
+    /* margin-top: 5px; */
+}
+
+.rating p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.stars {
+    font-size: 20px;
+    color: gold;
+   padding-top:10px;
+}
+
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+.border-left{
+    border-left:solid rgb(255, 166, 0) 1px;
+    padding-left:10px;
+}
+.left-column,
+.right-column {
+    padding: 10px;
+}
+
+.left-column {
+    margin-right: 10px;
+    width:60%;
+}
+.right-column{
+    width:40%;
+}
+
+section {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+section h2 {
+    page-break-after: avoid;
+    font-size: 18px;
+    width: fit-content;
+    margin-bottom: 10px;
+    color: #002F56;
+    border-bottom: solid rgb(255, 166, 0) 1px;
+    padding-bottom: 5px;
+}
+
+.expertise-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.testimonial-reference,
+.availability-preferences {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.testimonial-reference h2,
+.availability-preferences h2 {
+    page-break-after: avoid;
+    font-size: 20px;
+    color: #1a427b;
+    margin-bottom: 10px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.training-courses, .courses, .publications-speaking, .certifications {
+    /* margin-top: 30px; */
+    margin-bottom: 10px;
+    padding: 10px;
+    /* background-color: #f8f8f8; */
+    /* border-radius: 10px; */
+}
+
+.training-courses h2, .courses h2, .publications-speaking h2, .certifications h2 .availability-preferences h2{
+    page-break-after: avoid;
+    font-size: 20px;
+    width: fit-content;
+    color: #002F56;
+    border-bottom:solid rgb(255, 166, 0) 1px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ .publications, .speaking-engagements {
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+    flex-direction:column;
+}
+.courses-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction:row; */
+}
+.course-item {
+    flex: 1 1 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.course-item, ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.course-item ul li, .publications ul li, .speaking-engagements ul li, .certifications ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.course-item ul, .publications ul, .speaking-engagements ul, .certifications ul {
+    padding-left: 0;
+}
+.links
+{
+    display:flex;
+    justify-content: space-around
+}
+.preferences-group {
+    display: flex;
+    flex-direction:column;
+}
+.preference-item {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+.icon1
+{
+    width:20px;
+    padding-right:5px;
+}
+.icon2
+{
+    width:18px;
+    margin-right:2px;
+}
+
+
+/* footer */
+

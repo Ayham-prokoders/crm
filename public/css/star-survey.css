@@ -1,0 +1,70 @@
+.top-banner {
+    background: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    width: 100%;
+    padding: 70px 0;
+    position: relative;
+}
+
+.top-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #01295152;
+}
+
+.required-star {
+    color: red;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.top-banner h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .top-banner h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-banner h1 {
+        font-size: 25px;
+    }
+}
+
+
+.star-rating {
+    text-align: left;
+    direction: rtl;
+    font-size: 2em;
+    unicode-bidi: bidi-override;
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.star-rating label {
+    color: #ccc; /* Unselected star color */
+    cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold; /* Selected star color */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold; /* Hover effect */
+}
+@media (max-width: 768px) {
+    .top-banner{
+        background-size: cover;     }
+}
