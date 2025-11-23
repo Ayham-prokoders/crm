@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+
+class ModelAttachment extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'path',
+        'original_name',
+        'mime_type',
+        'size',
+        'user_id',
+    ];
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (!$model->id) {
+                $model->id = (string) Str::uuid();
+            }
+        });
+    }
+
+    public function attachable()
+    {
+        return $this->morphTo();
+    }
+
+    public function uploader()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+}

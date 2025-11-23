@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Modules\Lms\Models\{Classe ,Attendance ,Certificate,Company};
 use Modules\TrainerManagement\Models\{Instructor,TrainerAttendance};
+use App\Models\{ModelAttachment, ModelNote};
 
 class User extends Authenticatable implements Auditable
 {
@@ -152,6 +153,16 @@ class User extends Authenticatable implements Auditable
     public function deals()
     {
         return $this->hasMany(Deal::class);
+    }
+
+    public function modelNotes()
+    {
+        return $this->morphMany(ModelNote::class, 'noteable');
+    }
+
+    public function modelAttachments()
+    {
+        return $this->morphMany(ModelAttachment::class, 'attachable');
     }
 
     // public function companySupervisors()
