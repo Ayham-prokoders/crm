@@ -31,7 +31,8 @@ class Course extends Model implements Auditable
         'code',
         'base_code',
         'project_source',
-        'external_id'
+        'external_id',
+        'deleted_from_source'
     ];
 
     // protected static function booted(): void

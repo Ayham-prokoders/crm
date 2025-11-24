@@ -151,6 +151,8 @@ class SyncCourses2 extends Command
 
         }
 
+        $processedCourseIds = [];
+
         while ($lastCourseId !== -1) {
             // Retrieve courses from the remote API
             $response2 = $this->courseHelper->getCourses($lastCourseId, $url,$projectSource);
@@ -164,6 +166,7 @@ class SyncCourses2 extends Command
             // Process retrieved courses
             foreach ($courses as $courseData) {
                 $this->info('start courses');
+                $processedCourseIds[] = $courseData['id'];
                 $course = Course::where('external_id', $courseData['id'])
                     ->withoutGlobalScope('project_source_l1')
                     ->where('project_source', $projectSource)
@@ -190,7 +193,8 @@ class SyncCourses2 extends Command
                         'related_courses' => $courseData['related_courses'],
                         'category_id' => $courseCategory->id,
                         'online' => $courseData['online'],
-                        'project_source' => $projectSource
+                        'project_source' => $projectSource,
+                        'deleted_from_source' => false,
                     ]);
                     $this->info('update course' . $course->id);
                 } else {
@@ -204,7 +208,8 @@ class SyncCourses2 extends Command
                         'related_courses' => $courseData['related_courses'],
                         'category_id' => $courseCategory->id,
                         'online' => $courseData['online'],
-                        'project_source' => $projectSource
+                        'project_source' => $projectSource,
+                        'deleted_from_source' => false,
                     ]);
                     $this->info('create category' . $category->id);
                 }
@@ -271,8 +276,17 @@ class SyncCourses2 extends Command
 
         }
 
-        // Delete courses that were not found in the API response
+        // Mark courses that were not found in the API response as deleted from the source
+        $missingCourses = Course::where('project_source', $projectSource)
+            ->whereNotIn('external_id', $processedCourseIds)
+            ->whereNotNull('external_id')
+            ->withoutGlobalScope('project_source_l1')
+            ->get();
 
+        foreach ($missingCourses as $missingCourse) {
+            $missingCourse->update(['deleted_from_source' => true]);
+            $this->warn("Course marked as deleted from source: ID {$missingCourse->id}, External ID {$missingCourse->external_id}");
+        }
 
 
         logger()->info("Synced $categoryCount categories and $courseCount courses.");
